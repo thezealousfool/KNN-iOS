@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,17 @@
 		83511F6A23A2F47000FDE877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83511F6823A2F47000FDE877 /* Main.storyboard */; };
 		83511F6C23A2F47300FDE877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83511F6B23A2F47300FDE877 /* Assets.xcassets */; };
 		83511F6F23A2F47300FDE877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83511F6D23A2F47300FDE877 /* LaunchScreen.storyboard */; };
+		83511F7723A3162D00FDE877 /* KNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83511F7623A3162D00FDE877 /* KNN.swift */; };
+		83511F7923A3261500FDE877 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83511F7823A3261500FDE877 /* Beacon.swift */; };
+		83511F7B23A326ED00FDE877 /* BLEScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83511F7A23A326ED00FDE877 /* BLEScanner.swift */; };
+		83511F7D23A3561400FDE877 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83511F7C23A3561400FDE877 /* Circle.swift */; };
+		83511F7F23A3639600FDE877 /* knn.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83511F7E23A3639600FDE877 /* knn.txt */; };
+		9073615E297E8609FD9FA8D8 /* Pods_NavCogKNN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1500196200691BB8FC23155F /* Pods_NavCogKNN.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1500196200691BB8FC23155F /* Pods_NavCogKNN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavCogKNN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B313DD99C9E908F37C5CDA5 /* Pods-NavCogKNN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCogKNN.debug.xcconfig"; path = "Target Support Files/Pods-NavCogKNN/Pods-NavCogKNN.debug.xcconfig"; sourceTree = "<group>"; };
 		83511F5F23A2F47000FDE877 /* NavCogKNN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavCogKNN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83511F6223A2F47000FDE877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83511F6423A2F47000FDE877 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		83511F6B23A2F47300FDE877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83511F6E23A2F47300FDE877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83511F7023A2F47300FDE877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83511F7623A3162D00FDE877 /* KNN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNN.swift; sourceTree = "<group>"; };
+		83511F7823A3261500FDE877 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		83511F7A23A326ED00FDE877 /* BLEScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanner.swift; sourceTree = "<group>"; };
+		83511F7C23A3561400FDE877 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		83511F7E23A3639600FDE877 /* knn.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = knn.txt; sourceTree = "<group>"; };
+		F727F64B0D13C44ADA7BB8C6 /* Pods-NavCogKNN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCogKNN.release.xcconfig"; path = "Target Support Files/Pods-NavCogKNN/Pods-NavCogKNN.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9073615E297E8609FD9FA8D8 /* Pods_NavCogKNN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41D2DF7F392C331E60BCEA3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B313DD99C9E908F37C5CDA5 /* Pods-NavCogKNN.debug.xcconfig */,
+				F727F64B0D13C44ADA7BB8C6 /* Pods-NavCogKNN.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		83511F5623A2F47000FDE877 = {
 			isa = PBXGroup;
 			children = (
 				83511F6123A2F47000FDE877 /* NavCogKNN */,
 				83511F6023A2F47000FDE877 /* Products */,
+				41D2DF7F392C331E60BCEA3D /* Pods */,
+				AFB9AFF67C988F8DC3736A74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +89,21 @@
 				83511F6B23A2F47300FDE877 /* Assets.xcassets */,
 				83511F6D23A2F47300FDE877 /* LaunchScreen.storyboard */,
 				83511F7023A2F47300FDE877 /* Info.plist */,
+				83511F7623A3162D00FDE877 /* KNN.swift */,
+				83511F7823A3261500FDE877 /* Beacon.swift */,
+				83511F7A23A326ED00FDE877 /* BLEScanner.swift */,
+				83511F7C23A3561400FDE877 /* Circle.swift */,
+				83511F7E23A3639600FDE877 /* knn.txt */,
 			);
 			path = NavCogKNN;
+			sourceTree = "<group>";
+		};
+		AFB9AFF67C988F8DC3736A74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1500196200691BB8FC23155F /* Pods_NavCogKNN.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83511F7323A2F47300FDE877 /* Build configuration list for PBXNativeTarget "NavCogKNN" */;
 			buildPhases = (
+				98757A55DE630E4FA98FA35F /* [CP] Check Pods Manifest.lock */,
 				83511F5B23A2F47000FDE877 /* Sources */,
 				83511F5C23A2F47000FDE877 /* Frameworks */,
 				83511F5D23A2F47000FDE877 /* Resources */,
+				C424E228285944EAD1DD3037 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83511F7F23A3639600FDE877 /* knn.txt in Resources */,
 				83511F6F23A2F47300FDE877 /* LaunchScreen.storyboard in Resources */,
 				83511F6C23A2F47300FDE877 /* Assets.xcassets in Resources */,
 				83511F6A23A2F47000FDE877 /* Main.storyboard in Resources */,
@@ -133,14 +175,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98757A55DE630E4FA98FA35F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavCogKNN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C424E228285944EAD1DD3037 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavCogKNN/Pods-NavCogKNN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavCogKNN/Pods-NavCogKNN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavCogKNN/Pods-NavCogKNN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83511F5B23A2F47000FDE877 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83511F7D23A3561400FDE877 /* Circle.swift in Sources */,
+				83511F7B23A326ED00FDE877 /* BLEScanner.swift in Sources */,
 				83511F6723A2F47000FDE877 /* ViewController.swift in Sources */,
 				83511F6323A2F47000FDE877 /* AppDelegate.swift in Sources */,
+				83511F7923A3261500FDE877 /* Beacon.swift in Sources */,
 				83511F6523A2F47000FDE877 /* SceneDelegate.swift in Sources */,
+				83511F7723A3162D00FDE877 /* KNN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +370,7 @@
 		};
 		83511F7423A2F47300FDE877 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B313DD99C9E908F37C5CDA5 /* Pods-NavCogKNN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +389,7 @@
 		};
 		83511F7523A2F47300FDE877 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F727F64B0D13C44ADA7BB8C6 /* Pods-NavCogKNN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
